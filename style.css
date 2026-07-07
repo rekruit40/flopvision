@@ -100,6 +100,12 @@ h2.section-title { font-size: 1.5rem; margin-bottom: 8px; text-align: center; le
 .feature h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .feature p { color: var(--muted); font-size: .95rem; }
 
+/* How-to steps */
+.steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.step { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.step h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--accent); }
+.step p { color: var(--muted); font-size: .95rem; }
+
 /* Two-column "is / is not" */
 .cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
@@ -154,7 +160,7 @@ footer a:hover { color: var(--accent); }
 .backlink { display: inline-block; margin: 8px 0 0; }
 
 @media (max-width: 768px) {
-  .features, .cols { grid-template-columns: 1fr; }
+  .features, .cols, .steps { grid-template-columns: 1fr; }
   .hero { padding: 44px 0 28px; }
 }
 [hidden] { display: none !important; }
