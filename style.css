@@ -116,23 +116,33 @@ h2.section-title { font-size: 1.5rem; margin-bottom: 8px; text-align: center; le
 .card.no li::before { content: "×"; position: absolute; left: 4px; color: #d9776b; font-weight: 700; }
 
 /* Screenshots */
-.shots { display: flex; gap: 18px; overflow-x: auto; padding: 8px 4px 16px; scroll-snap-type: x mandatory; }
+.shots { display: flex; gap: 24px; overflow-x: auto; padding: 8px 4px 16px; scroll-snap-type: x mandatory; }
+/* Realistic phone mock: dark device body + thin bezel + a dynamic-island
+   pill, so a screenshot reads as "on a phone" (not a desktop crop). The
+   body is deliberately dark in both site themes — phones are dark objects. */
 .phone {
-  flex: 0 0 auto; width: 220px; scroll-snap-align: center;
-  background: var(--surface-2); border: 1px solid var(--border);
-  border-radius: 28px; padding: 10px;
+  flex: 0 0 auto; width: 212px; scroll-snap-align: center;
+  background: #0c0f15; border: 1px solid #29323f;
+  border-radius: 36px; padding: 9px;
+  box-shadow: 0 14px 36px var(--shadow);
+  position: relative;
+}
+.phone::before {
+  content: ""; position: absolute; z-index: 2;
+  top: 20px; left: 50%; transform: translateX(-50%);
+  width: 52px; height: 14px; background: #0c0f15; border-radius: 10px;
 }
 .phone .screen {
-  aspect-ratio: 9 / 19.5; border-radius: 20px;
-  background:
-    linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, var(--surface)) 0%, var(--surface) 60%);
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  color: var(--muted); font-size: .9rem; padding: 16px; position: relative; overflow: hidden;
+  aspect-ratio: 1080 / 2424; border-radius: 28px; overflow: hidden;
+  background: #000; position: relative;
 }
-.phone .screen span { position: relative; z-index: 1; }
+.phone .screen span {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: center; text-align: center; padding: 16px;
+  color: var(--muted); font-size: .9rem;
+}
 .phone .screen img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.phone .cap { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 10px; }
+.phone .cap { text-align: center; color: var(--muted); font-size: .85rem; margin-top: 14px; }
 
 /* CTA */
 .cta { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 36px 24px; }
