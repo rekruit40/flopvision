@@ -407,10 +407,17 @@ const T = {
     return document.documentElement.getAttribute("data-theme") || "dark";
   }
 
+  function updateThemeIcon() {
+    const tb = document.getElementById("themeToggle");
+    // Show the current theme's face: moon while dark, sun while light.
+    if (tb) tb.textContent = currentTheme() === "light" ? "☀️" : "🌙";
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     applyLang(pickInitialLang());
     const savedTheme = localStorage.getItem("fv_theme");
     if (savedTheme) applyTheme(savedTheme);
+    updateThemeIcon();
 
     document.querySelectorAll("[data-lang]").forEach(function (b) {
       b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
@@ -418,6 +425,7 @@ const T = {
     const tb = document.getElementById("themeToggle");
     if (tb) tb.addEventListener("click", function () {
       applyTheme(currentTheme() === "light" ? "dark" : "light");
+      updateThemeIcon();
     });
   });
 })();
