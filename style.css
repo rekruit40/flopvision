@@ -28,20 +28,8 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #f5f8fc;
-    --surface: #ffffff;
-    --surface-2: #eef3fa;
-    --text: #14202e;
-    --muted: #4d637b;
-    --accent: #1f6e43;
-    --accent-strong: #175533;
-    --border: #dde6f1;
-    --shadow: rgba(20, 40, 70, 0.10);
-    color-scheme: light;
-  }
-}
+/* Dark is the default regardless of the OS setting; light applies only when
+   the visitor explicitly picks it (data-theme="light" via the toggle). */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -91,7 +79,7 @@ a:hover { text-decoration: underline; }
 .hero .tag { color: var(--muted); font-size: 1.15rem; max-width: 560px; margin: 0 auto; }
 
 /* Store badges */
-.badges { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+.badges { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 28px; }
 .badge { display: inline-flex; height: 52px; }
 .badge svg { height: 100%; width: auto; display: block; }
 .badge.disabled { opacity: .5; pointer-events: none; position: relative; }

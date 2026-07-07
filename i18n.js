@@ -364,9 +364,8 @@ const T = {
   }
 
   function currentTheme() {
-    const t = document.documentElement.getAttribute("data-theme");
-    if (t) return t;
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    // Dark is the site's default; only an explicit data-theme overrides it.
+    return document.documentElement.getAttribute("data-theme") || "dark";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
