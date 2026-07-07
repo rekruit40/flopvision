@@ -116,25 +116,32 @@ h2.section-title { font-size: 1.5rem; margin-bottom: 8px; text-align: center; le
 .card.no li::before { content: "×"; position: absolute; left: 4px; color: #d9776b; font-weight: 700; }
 
 /* Screenshots */
-.shots { display: flex; gap: 24px; overflow-x: auto; padding: 8px 4px 16px; scroll-snap-type: x mandatory; }
+/* align-items:flex-start is load-bearing: the default `stretch` would give
+   each .phone a definite (equal) height and override the screen's
+   aspect-ratio, so object-fit:cover would crop the middle. flex-start lets
+   each phone size to its screen's true 1080:2424 intrinsic height. */
+.shots { display: flex; align-items: flex-start; gap: 24px; overflow-x: auto; padding: 8px 4px 16px; scroll-snap-type: x mandatory; }
 /* Realistic phone mock: dark device body + thin bezel + a dynamic-island
    pill, so a screenshot reads as "on a phone" (not a desktop crop). The
    body is deliberately dark in both site themes — phones are dark objects. */
 .phone {
-  flex: 0 0 auto; width: 212px; scroll-snap-align: center;
-  background: #0c0f15; border: 1px solid #29323f;
-  border-radius: 36px; padding: 9px;
-  box-shadow: 0 14px 36px var(--shadow);
+  flex: 0 0 auto; width: 210px; scroll-snap-align: center;
+  background: linear-gradient(160deg, #222b3a 0%, #0c0f15 45%);
+  border-radius: 42px; padding: 11px;
+  box-shadow: 0 18px 42px var(--shadow),
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.08);
   position: relative;
 }
-.phone::before {
-  content: ""; position: absolute; z-index: 2;
-  top: 20px; left: 50%; transform: translateX(-50%);
-  width: 52px; height: 14px; background: #0c0f15; border-radius: 10px;
+/* side buttons — subtle nubs on the device edge for a bit of realism */
+.phone::after {
+  content: ""; position: absolute; right: -2px; top: 96px;
+  width: 3px; height: 46px; border-radius: 2px;
+  background: #2a3342;
 }
 .phone .screen {
-  aspect-ratio: 1080 / 2424; border-radius: 28px; overflow: hidden;
+  aspect-ratio: 1080 / 2424; border-radius: 32px; overflow: hidden;
   background: #000; position: relative;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.7);
 }
 .phone .screen span {
   position: absolute; inset: 0; display: flex; align-items: center;
