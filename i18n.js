@@ -55,7 +55,7 @@ const T = {
     "is.no.3": "No accounts, no tracking",
 
     "shots.title": "Inside the app",
-    "shots.sub": "Interface preview — screenshots are placeholders while the design is being refreshed.",
+    "shots.sub": "Real screens from the app — Android now, iOS soon.",
     "shots.cap1": "Range editor",
     "shots.cap2": "GTO strategy",
     "shots.cap3": "Trainer",
@@ -174,7 +174,7 @@ const T = {
     "is.no.3": "Нет аккаунтов и слежки",
 
     "shots.title": "Внутри приложения",
-    "shots.sub": "Превью интерфейса — скриншоты временные, пока обновляем дизайн.",
+    "shots.sub": "Реальные экраны приложения — Android сейчас, iOS скоро.",
     "shots.cap1": "Редактор диапазонов",
     "shots.cap2": "GTO-стратегия",
     "shots.cap3": "Тренажёр",
@@ -293,7 +293,7 @@ const T = {
     "is.no.3": "没有账号，没有追踪",
 
     "shots.title": "应用内一览",
-    "shots.sub": "界面预览——设计更新期间，截图为占位图。",
+    "shots.sub": "应用真实截图——Android 现已推出，iOS 即将到来。",
     "shots.cap1": "范围编辑器",
     "shots.cap2": "GTO 策略",
     "shots.cap3": "训练器",
