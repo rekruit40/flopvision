@@ -3,63 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlopVision — Poker Range &amp; GTO Study Tool</title>
-<meta name="description" content="FlopVision: offline poker range analyzer, equity calculator and GTO strategy viewer. No gambling — a study tool.">
-<style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0e1626; color: #dce6f5; font: 16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-  header { text-align: center; padding: 32px 0 8px; }
-  header img { width: 128px; height: 128px; border-radius: 28px; }
-  h1 { font-size: 2.2rem; margin: 16px 0 4px; }
-  .tag { color: #8fb3e0; font-size: 1.1rem; }
-  section { margin-top: 40px; }
-  h2 { font-size: 1.2rem; color: #b9d2f5; margin-bottom: 10px; }
-  ul { list-style: none; }
-  li { padding: 8px 0 8px 28px; position: relative; }
-  li::before { content: "♠"; position: absolute; left: 4px; color: #7fa8dd; }
-  .note { margin-top: 40px; padding: 16px; background: #131e33; border-radius: 12px; color: #9fb4d4; font-size: .95rem; }
-  footer { margin-top: 48px; text-align: center; color: #6d84a8; font-size: .9rem; }
-  a { color: #8fb3e0; }
-</style>
+<title data-i18n="index.title">FlopVision — Poker Range &amp; GTO Study Tool</title>
+<meta name="description" content="FlopVision: offline poker range analyzer, equity calculator and GTO strategy viewer. A study tool — no gambling.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <img src="icon.png" alt="FlopVision icon">
-    <h1>FlopVision</h1>
-    <p class="tag">See the flop the way solvers do</p>
-  </header>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">FlopVision</a>
+    <div class="spacer"></div>
+    <nav class="controls">
+      <button class="langbtn" data-lang="en" aria-pressed="true">EN</button>
+      <button class="langbtn" data-lang="ru" aria-pressed="false">RU</button>
+      <button class="langbtn" data-lang="zh" aria-pressed="false">中文</button>
+      <button class="themebtn" id="themeToggle" data-i18n="theme.toggle" title="Theme">Theme</button>
+    </nav>
+  </div>
+</header>
 
-  <section>
-    <h2>What it is</h2>
-    <ul>
-      <li>Range editor with weighted 13×13 matrix and standard notation</li>
-      <li>How ranges hit boards: made-hand and draw breakdown for any flop, turn or river</li>
-      <li>Fast equity: hand vs range and range vs range, computed on your device</li>
-      <li>GTO strategy viewer: precomputed solver solutions with per-combo action frequencies</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>What it is not</h2>
-    <ul>
-      <li>No real-money gambling, no bets, no casino</li>
-      <li>No connection to poker sites — FlopVision is a study tool</li>
-      <li>No account, no tracking: everything runs offline on your device</li>
-    </ul>
-  </section>
-
-  <div class="note">
-    FlopVision is an educational tool for studying poker theory.
-    It does not offer gambling of any kind.
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <img class="icon" src="icon.png" alt="FlopVision icon">
+      <h1>FlopVision</h1>
+      <p class="tag" data-i18n="hero.tag">See the flop the way solvers do. An offline poker range, equity and GTO study tool — private, fast, and made for your pocket.</p>
+      <!-- Official store badges (downloaded from Google/Apple). Shown as
+           "coming soon" until public launch; link the Play badge to the
+           listing and drop the .disabled class once live. -->
+      <div class="badges">
+        <span class="badge disabled"><img src="assets/google-play-badge.png" alt="Get it on Google Play" style="height:64px"></span>
+        <span class="badge disabled"><img src="assets/app-store-badge.svg" alt="Download on the App Store" style="height:46px"></span>
+      </div>
+      <p class="badge-note" data-i18n="badges.soon">Android available soon · iOS coming later</p>
+    </section>
   </div>
 
-  <footer>
-    <p><a href="privacy.html">Privacy Policy</a> · Contact: rekruit40@gmail.com</p>
-    <p>© 2026 FlopVision</p>
-  </footer>
-</div>
+  <div class="wrap">
+    <section>
+      <h2 class="section-title" data-i18n="feat.title">What FlopVision does</h2>
+      <p class="section-sub" data-i18n="feat.sub">Everything runs on your device. No account, no internet needed.</p>
+      <div class="features">
+        <div class="feature"><span class="fi">▦</span><h3 data-i18n="feat.range.h">Range editor</h3><p data-i18n="feat.range.p">Weighted 13×13 matrix with standard notation and a saved-range library.</p></div>
+        <div class="feature"><span class="fi">◑</span><h3 data-i18n="feat.breakdown.h">Board breakdown</h3><p data-i18n="feat.breakdown.p">See how ranges hit any flop, turn or river — made hands and draws.</p></div>
+        <div class="feature"><span class="fi">%</span><h3 data-i18n="feat.equity.h">Instant equity</h3><p data-i18n="feat.equity.p">Hand vs range and range vs range, computed locally in milliseconds.</p></div>
+        <div class="feature"><span class="fi">♠</span><h3 data-i18n="feat.gto.h">GTO viewer</h3><p data-i18n="feat.gto.p">Precomputed solver solutions with per-combo action frequencies.</p></div>
+        <div class="feature"><span class="fi">✓</span><h3 data-i18n="feat.trainer.h">Trainer</h3><p data-i18n="feat.trainer.p">Quiz yourself on solver-correct flop decisions, hand after hand.</p></div>
+        <div class="feature"><span class="fi">⛆</span><h3 data-i18n="feat.offline.h">Private &amp; offline</h3><p data-i18n="feat.offline.p">No tracking, no ads, no servers. Your study stays on your phone.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title" data-i18n="is.title">A study tool — not gambling</h2>
+      <div class="cols">
+        <div class="card yes">
+          <h3 data-i18n="is.yes.h">What it is</h3>
+          <ul>
+            <li data-i18n="is.yes.1">An educational poker theory tool</li>
+            <li data-i18n="is.yes.2">Real solver strategies, computed offline</li>
+            <li data-i18n="is.yes.3">Affordable — one price, all spots</li>
+            <li data-i18n="is.yes.4">Works with no account and no internet</li>
+          </ul>
+        </div>
+        <div class="card no">
+          <h3 data-i18n="is.no.h">What it is not</h3>
+          <ul>
+            <li data-i18n="is.no.1">No real-money gambling, bets or casino</li>
+            <li data-i18n="is.no.2">No connection to poker sites</li>
+            <li data-i18n="is.no.3">No accounts, no tracking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title" data-i18n="shots.title">Inside the app</h2>
+      <p class="section-sub" data-i18n="shots.sub">Interface preview — screenshots are placeholders while the design is being refreshed.</p>
+      <div class="shots">
+        <div class="phone"><div class="screen"><span data-i18n-ph="shots.ph">Screenshot coming soon</span></div><div class="cap" data-i18n="shots.cap1">Range editor</div></div>
+        <div class="phone"><div class="screen"><span data-i18n-ph="shots.ph">Screenshot coming soon</span></div><div class="cap" data-i18n="shots.cap2">GTO strategy</div></div>
+        <div class="phone"><div class="screen"><span data-i18n-ph="shots.ph">Screenshot coming soon</span></div><div class="cap" data-i18n="shots.cap3">Trainer</div></div>
+        <div class="phone"><div class="screen"><span data-i18n-ph="shots.ph">Screenshot coming soon</span></div><div class="cap" data-i18n="shots.cap4">Equity &amp; breakdown</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="cta">
+        <h2 data-i18n="cta.h">Study smarter, anywhere</h2>
+        <p data-i18n="cta.p">FlopVision is launching soon on Android, with iOS to follow.</p>
+        <a class="btn" href="mailto:rekruit40@gmail.com" data-i18n="cta.btn">Contact us</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p data-i18n="footer.disclaimer">FlopVision is an educational tool for studying poker theory. It offers no gambling of any kind.</p>
+  </div>
+  <div class="wrap" style="margin-top:12px">
+    <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+    <a href="terms.html" data-i18n="nav.terms">Terms</a>
+    <a href="support.html" data-i18n="nav.support">Support</a>
+    <a href="mailto:rekruit40@gmail.com"><span data-i18n="footer.contact">Contact</span>: rekruit40@gmail.com</a>
+    <span data-i18n="footer.rights">© 2026 FlopVision</span>
+  </div>
+</footer>
+<script src="i18n.js"></script>
 </body>
 </html>

@@ -3,61 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlopVision — Privacy Policy</title>
-<style>
-  :root { color-scheme: dark; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0e1626; color: #dce6f5; font: 16px/1.7 -apple-system, "Segoe UI", Roboto, sans-serif; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-  h1 { font-size: 1.8rem; margin-bottom: 4px; }
-  .date { color: #6d84a8; margin-bottom: 32px; }
-  h2 { font-size: 1.15rem; color: #b9d2f5; margin: 28px 0 8px; }
-  p, li { color: #c3d2e8; }
-  ul { padding-left: 22px; }
-  a { color: #8fb3e0; }
-</style>
+<title data-i18n="priv.title">FlopVision — Privacy Policy</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-  <h1>FlopVision — Privacy Policy</h1>
-  <p class="date">Effective date: July 3, 2026</p>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">FlopVision</a>
+    <div class="spacer"></div>
+    <nav class="controls">
+      <button class="langbtn" data-lang="en" aria-pressed="true">EN</button>
+      <button class="langbtn" data-lang="ru" aria-pressed="false">RU</button>
+      <button class="langbtn" data-lang="zh" aria-pressed="false">中文</button>
+      <button class="themebtn" id="themeToggle" data-i18n="theme.toggle">Theme</button>
+    </nav>
+  </div>
+</header>
 
-  <h2>Summary</h2>
-  <p>FlopVision is an offline poker study tool. The app does not require an
-  account, does not collect personal data, does not use advertising or
-  analytics SDKs, and does not transmit your ranges, boards or calculations
-  anywhere. All computation happens locally on your device.</p>
+<main class="wrap narrow doc">
+  <h1 data-i18n="priv.h">Privacy Policy</h1>
+  <p class="date" data-i18n="priv.date">Effective date: July 3, 2026</p>
 
-  <h2>Data we collect</h2>
-  <p>None. FlopVision has no server of its own and sends no usage data to us.
-  Your saved ranges and settings are stored only on your device and are
-  deleted when you uninstall the app.</p>
+  <h2 data-i18n="priv.sum.h">Summary</h2>
+  <p data-i18n="priv.sum.p">FlopVision is an offline poker study tool. The app needs no account, collects no personal data, uses no advertising or analytics SDKs, and transmits none of your ranges, boards or calculations. All computation happens locally on your device.</p>
 
-  <h2>Subscriptions and purchases</h2>
-  <p>If you purchase an optional Pro subscription, the payment is processed
-  entirely by Google Play. We never see your name, payment details or
-  address. To validate subscription status the app uses RevenueCat, a
-  subscription-management service, which receives an anonymous app-generated
-  identifier and purchase tokens from Google Play. This data cannot be used
-  by us to identify you. RevenueCat's privacy policy:
-  <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.
-  Google Play's terms apply to all purchases.</p>
+  <h2 data-i18n="priv.collect.h">Data we collect</h2>
+  <p data-i18n="priv.collect.p">None. FlopVision has no server of its own and sends no usage data to us. Your saved ranges and settings are stored only on your device and are deleted when you uninstall the app.</p>
 
-  <h2>Permissions</h2>
-  <p>FlopVision requests no sensitive permissions: no location, no contacts,
-  no camera, no storage access beyond its own sandbox.</p>
+  <h2 data-i18n="priv.subs.h">Subscriptions and purchases</h2>
+  <p data-i18n="priv.subs.p">If you buy an optional Pro subscription, payment is processed entirely by the app store. We never see your name, payment details or address. To validate subscription status the app uses RevenueCat, which receives an anonymous app-generated identifier and store purchase tokens; this data cannot be used by us to identify you. RevenueCat's privacy policy: revenuecat.com/privacy.</p>
 
-  <h2>Children</h2>
-  <p>FlopVision is an educational strategy tool that contains poker themes
-  and is not directed at children. It offers no real-money gambling.</p>
+  <h2 data-i18n="priv.perm.h">Permissions</h2>
+  <p data-i18n="priv.perm.p">FlopVision requests no sensitive permissions: no location, contacts, camera, or storage access beyond its own sandbox.</p>
 
-  <h2>Changes</h2>
-  <p>If this policy changes (for example, if we ever add optional analytics),
-  the updated version will be published at this address with a new effective
-  date before the change ships.</p>
+  <h2 data-i18n="priv.child.h">Children</h2>
+  <p data-i18n="priv.child.p">FlopVision is an educational strategy tool that contains poker themes and is not directed at children. It offers no real-money gambling.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy: rekruit40@gmail.com</p>
-</div>
+  <h2 data-i18n="priv.change.h">Changes</h2>
+  <p data-i18n="priv.change.p">If this policy changes, the updated version will be published here with a new effective date before the change ships.</p>
+
+  <h2 data-i18n="priv.contact.h">Contact</h2>
+  <p data-i18n="priv.contact.p">Questions about this policy: rekruit40@gmail.com</p>
+
+  <a class="backlink" href="index.html" data-i18n="support.back">Back to home</a>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+    <a href="terms.html" data-i18n="nav.terms">Terms</a>
+    <a href="support.html" data-i18n="nav.support">Support</a>
+    <span data-i18n="footer.rights">© 2026 FlopVision</span>
+  </div>
+</footer>
+<script src="i18n.js"></script>
 </body>
 </html>
