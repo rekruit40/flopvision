@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <radialGradient id="bg" cx="30%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#16233a"/>
+      <stop offset="60%" stop-color="#0e1626"/>
+      <stop offset="100%" stop-color="#0a101c"/>
+    </radialGradient>
+    <linearGradient id="spadeStroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2f7ff"/>
+      <stop offset="55%" stop-color="#b9d2f5"/>
+      <stop offset="100%" stop-color="#7fa8dd"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+
+  <!-- spade + matrix mark, left -->
+  <g transform="translate(60,58) scale(0.375)">
+    <g filter="url(#glow)">
+      <path d="M 512 128 C 400 292, 244 366, 244 546 C 244 668, 348 724, 442 690
+               C 430 776, 390 838, 338 886 L 686 886 C 634 838, 594 776, 582 690
+               C 676 724, 780 668, 780 546 C 780 366, 624 292, 512 128 Z"
+            fill="none" stroke="url(#spadeStroke)" stroke-width="26" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(345,330)">
+      <rect x="0" y="0" width="70" height="70" rx="16" fill="#e0523a"/>
+      <rect x="88" y="0" width="70" height="70" rx="16" fill="#e78a2f"/>
+      <rect x="176" y="0" width="70" height="70" rx="16" fill="#dcb32e"/>
+      <rect x="264" y="0" width="70" height="70" rx="16" fill="#5aa844"/>
+      <rect x="0" y="88" width="70" height="70" rx="16" fill="#e78a2f"/>
+      <rect x="88" y="88" width="70" height="70" rx="16" fill="#dcb32e"/>
+      <rect x="176" y="88" width="70" height="70" rx="16" fill="#5aa844"/>
+      <rect x="264" y="88" width="70" height="70" rx="16" fill="#3d8bd4"/>
+      <rect x="0" y="176" width="70" height="70" rx="16" fill="#dcb32e"/>
+      <rect x="88" y="176" width="70" height="70" rx="16" fill="#5aa844"/>
+      <rect x="176" y="176" width="70" height="70" rx="16" fill="#3d8bd4"/>
+      <rect x="264" y="176" width="70" height="70" rx="16" fill="#2c4f7c"/>
+      <rect x="0" y="264" width="70" height="70" rx="16" fill="#5aa844"/>
+      <rect x="88" y="264" width="70" height="70" rx="16" fill="#3d8bd4"/>
+      <rect x="176" y="264" width="70" height="70" rx="16" fill="#2c4f7c"/>
+      <rect x="264" y="264" width="70" height="70" rx="16" fill="#22354c"/>
+    </g>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <text x="470" y="235" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="76" font-weight="700" fill="#f2f7ff">FlopVision</text>
+  <text x="472" y="292" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="30" fill="#8fb3e0">Ranges · Equity · GTO</text>
+  <text x="472" y="338" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="22" fill="#6d84a8">See the flop the way solvers do</text>
+</svg>
