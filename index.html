@@ -29,12 +29,14 @@
       <h1>FlopVision</h1>
       <p class="tag" data-i18n="hero.tag">See the flop the way solvers do. An offline poker range, equity and GTO study tool — private, fast, and made for your pocket.</p>
       <!-- Official store badges (downloaded from Google/Apple/Huawei).
-           Shown as "coming soon" until public launch; link each badge to
-           its listing and drop the .disabled class once live. -->
+           URLs are the canonical store listings (live once each store
+           approves the app). Each badge keeps the .disabled class — which is
+           opacity:.5 + pointer-events:none — until its store goes live; drop
+           .disabled on a badge the moment that store publishes. -->
       <div class="badges">
-        <span class="badge disabled"><img src="assets/google-play-badge.png?v=2" alt="Get it on Google Play" style="height:44px"></span>
-        <span class="badge disabled"><img src="assets/app-store-badge.svg?v=2" alt="Download on the App Store" style="height:44px"></span>
-        <span class="badge disabled"><img src="assets/appgallery-badge.svg?v=1" alt="Explore it on AppGallery" style="height:44px"></span>
+        <a class="badge disabled" href="https://play.google.com/store/apps/details?id=com.flopvision.app" target="_blank" rel="noopener"><img src="assets/google-play-badge.png?v=2" alt="Get it on Google Play" style="height:44px"></a>
+        <a class="badge disabled" href="https://apps.apple.com/app/id6791618674" target="_blank" rel="noopener"><img src="assets/app-store-badge.svg?v=2" alt="Download on the App Store" style="height:44px"></a>
+        <a class="badge disabled" href="https://appgallery.huawei.com/app/C118268619" target="_blank" rel="noopener"><img src="assets/appgallery-badge.svg?v=1" alt="Explore it on AppGallery" style="height:44px"></a>
       </div>
       <p class="badge-note" data-i18n="badges.soon">Android available soon · iOS coming later</p>
     </section>
@@ -50,6 +52,7 @@
         <div class="feature"><span class="fi">%</span><h3 data-i18n="feat.equity.h">Instant equity</h3><p data-i18n="feat.equity.p">Hand vs range and range vs range, computed locally in milliseconds.</p></div>
         <div class="feature"><span class="fi">♠</span><h3 data-i18n="feat.gto.h">GTO viewer</h3><p data-i18n="feat.gto.p">Precomputed solver solutions with per-combo action frequencies.</p></div>
         <div class="feature"><span class="fi">✓</span><h3 data-i18n="feat.trainer.h">Trainer</h3><p data-i18n="feat.trainer.p">Quiz yourself on solver-correct flop decisions, hand after hand.</p></div>
+        <div class="feature"><span class="fi">◎</span><h3 data-i18n="feat.leak.h">Leak Map</h3><p data-i18n="feat.leak.p">Turns your trainer mistakes into weak themes you can spot and re-drill.</p></div>
         <div class="feature"><span class="fi">⛆</span><h3 data-i18n="feat.offline.h">Private &amp; offline</h3><p data-i18n="feat.offline.p">No tracking, no ads, no servers. Your study stays on your phone.</p></div>
       </div>
     </section>
@@ -63,6 +66,7 @@
         <div class="step"><h3 data-i18n="howto.s3.h">3 · Read equity &amp; breakdown</h3><p data-i18n="howto.s3.p">Instantly see how the range hits the board — made hands, draws, and equity versus another range.</p></div>
         <div class="step"><h3 data-i18n="howto.s4.h">4 · Study GTO</h3><p data-i18n="howto.s4.p">Open a solved spot and read per-hand action frequencies straight from the solver.</p></div>
         <div class="step"><h3 data-i18n="howto.s5.h">5 · Train</h3><p data-i18n="howto.s5.p">Quiz yourself hand after hand and get instant, solver-correct feedback.</p></div>
+        <div class="step"><h3 data-i18n="howto.s6.h">6 · Review your leaks</h3><p data-i18n="howto.s6.p">Open the Leak Map to see which spots, streets and textures you miss most — then re-deal and fix them.</p></div>
       </div>
     </section>
 
@@ -93,10 +97,12 @@
       <h2 class="section-title" data-i18n="shots.title">Inside the app</h2>
       <p class="section-sub" data-i18n="shots.sub">Real screens from the app — Android now, iOS soon.</p>
       <div class="shots">
-        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/01_range_dark.png?v=3" alt="Range editor" loading="lazy"><img class="shot shot-light" src="assets/screens/01_range_light.png?v=3" alt="Range editor" loading="lazy"></div><div class="cap" data-i18n="shots.cap1">Range editor</div></div>
-        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/03_gto_dark.png?v=3" alt="GTO strategy" loading="lazy"><img class="shot shot-light" src="assets/screens/03_gto_light.png?v=3" alt="GTO strategy" loading="lazy"></div><div class="cap" data-i18n="shots.cap2">GTO strategy</div></div>
-        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/04_trainer_dark.png?v=3" alt="Trainer" loading="lazy"><img class="shot shot-light" src="assets/screens/04_trainer_light.png?v=3" alt="Trainer" loading="lazy"></div><div class="cap" data-i18n="shots.cap3">Trainer</div></div>
-        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/02_analysis_dark.png?v=3" alt="Equity and breakdown" loading="lazy"><img class="shot shot-light" src="assets/screens/02_analysis_light.png?v=3" alt="Equity and breakdown" loading="lazy"></div><div class="cap" data-i18n="shots.cap4">Equity &amp; breakdown</div></div>
+        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/01_range_dark.png?v=4" alt="Range editor" loading="lazy"><img class="shot shot-light" src="assets/screens/01_range_light.png?v=4" alt="Range editor" loading="lazy"></div><div class="cap" data-i18n="shots.cap1">Range editor</div></div>
+        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/02_gto_dark.png?v=4" alt="GTO strategy" loading="lazy"><img class="shot shot-light" src="assets/screens/02_gto_light.png?v=4" alt="GTO strategy" loading="lazy"></div><div class="cap" data-i18n="shots.cap2">GTO strategy</div></div>
+        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/03_gto3bet_dark.png?v=4" alt="3-bet strategy" loading="lazy"><img class="shot shot-light" src="assets/screens/03_gto3bet_light.png?v=4" alt="3-bet strategy" loading="lazy"></div><div class="cap" data-i18n="shots.cap3">3-bet strategy</div></div>
+        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/04_leakmap_dark.png?v=4" alt="Leak Map" loading="lazy"><img class="shot shot-light" src="assets/screens/04_leakmap_light.png?v=4" alt="Leak Map" loading="lazy"></div><div class="cap" data-i18n="shots.cap4">Leak Map</div></div>
+        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/05_trainer_dark.png?v=4" alt="Trainer" loading="lazy"><img class="shot shot-light" src="assets/screens/05_trainer_light.png?v=4" alt="Trainer" loading="lazy"></div><div class="cap" data-i18n="shots.cap5">Trainer</div></div>
+        <div class="phone"><div class="screen"><img class="shot shot-dark" src="assets/screens/06_spots_dark.png?v=4" alt="Spot selector" loading="lazy"><img class="shot shot-light" src="assets/screens/06_spots_light.png?v=4" alt="Spot selector" loading="lazy"></div><div class="cap" data-i18n="shots.cap6">Spots</div></div>
       </div>
     </section>
 
@@ -122,6 +128,6 @@
     <span data-i18n="footer.rights">© 2026 FlopVision</span>
   </div>
 </footer>
-<script src="i18n.js?v=4"></script>
+<script src="i18n.js?v=5"></script>
 </body>
 </html>
