@@ -13,7 +13,7 @@ const T = {
 
     "index.title": "FlopVision — Poker Range & GTO Study Tool",
     "hero.tag": "See the flop the way solvers do. An offline poker range, equity and GTO study tool — private, fast, and made for your pocket.",
-    "badges.soon": "In review on Google Play, the App Store & AppGallery — live soon",
+    "badges.soon": "Now on AppGallery · Google Play & the App Store coming soon",
 
     "feat.title": "What FlopVision does",
     "feat.sub": "Everything runs on your device. No account, no internet needed.",
@@ -140,7 +140,7 @@ const T = {
 
     "index.title": "FlopVision — покерный тренажёр диапазонов и GTO",
     "hero.tag": "Смотри на флоп глазами солвера. Офлайн-инструмент для диапазонов, эквити и GTO — приватно, быстро и всегда в кармане.",
-    "badges.soon": "На проверке в Google Play, App Store и AppGallery — скоро в сторах",
+    "badges.soon": "Уже в AppGallery · Google Play и App Store — скоро",
 
     "feat.title": "Что умеет FlopVision",
     "feat.sub": "Всё считается на устройстве. Без аккаунта и без интернета.",
@@ -267,7 +267,7 @@ const T = {
 
     "index.title": "FlopVision — 扑克范围与 GTO 学习工具",
     "hero.tag": "像求解器一样看翻牌。离线的扑克范围、胜率与 GTO 学习工具——私密、快速，装进口袋。",
-    "badges.soon": "正在 Google Play、App Store 与 AppGallery 审核中 — 即将上线",
+    "badges.soon": "已上架 AppGallery · Google Play 与 App Store 即将上线",
 
     "feat.title": "FlopVision 能做什么",
     "feat.sub": "全部在你的设备上运行。无需账号，无需联网。",
